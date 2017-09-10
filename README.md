@@ -1,4 +1,4 @@
-# WebMovizAngular
+# Web Moviz, the Angular way
 
 This project is the [Angular](https://angular.io) version of my other repository [WebMoviz](https://github.com/cicithesquirrel/web-moviz), which was made with [React](https://facebook.github.io/react/).
 
