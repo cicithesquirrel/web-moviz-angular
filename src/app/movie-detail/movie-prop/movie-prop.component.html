@@ -1,4 +1,9 @@
 <li *ngIf="value">
   <span>{{label}}:</span>
-  <span>{{value}}</span>
+  <span [ngSwitch]="kind">
+    <span *ngSwitchCase="Kind['Image']">
+      <img src="{{value}}" />
+    </span>
+    <span *ngSwitchDefault>{{value}}</span>
+  </span>
 </li>

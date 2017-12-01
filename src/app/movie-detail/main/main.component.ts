@@ -4,6 +4,7 @@ import { Location } from '@angular/common';
 
 import { Movie } from '../../model/movie';
 import { DatastoreService } from '../../datastore.service';
+import { Kind } from '../movie-prop/movie-prop-kind';
 
 @Component({
   selector: 'app-main',
@@ -14,6 +15,8 @@ import { DatastoreService } from '../../datastore.service';
 export class MainComponent implements OnInit {
 
   @Input() movie: Movie;
+
+  PropertyKind = Kind;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,4 +34,7 @@ export class MainComponent implements OnInit {
       .subscribe(m => this.movie = m);
   }
 
+  getCountryImageUrl() :string{
+    return '/assets/flags/' + this.movie.country + '.png';
+  }
 }

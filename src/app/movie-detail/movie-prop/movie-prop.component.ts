@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Kind } from './movie-prop-kind';
 
 @Component({
   selector: 'app-movie-prop',
@@ -9,6 +10,9 @@ export class MoviePropComponent implements OnInit {
 
   @Input() label: string;
   @Input() value: string;
+  @Input() kind: Kind = Kind.Text;
+
+  Kind = Kind;
 
   constructor() { }
 

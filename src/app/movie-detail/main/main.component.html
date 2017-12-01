@@ -14,7 +14,7 @@
     <section class="col-xs-12 col-sm-7">
       <h3>Details</h3>
       <app-movie-prop label="Director(s)" value="{{movie.director}}"></app-movie-prop>
-      <app-movie-prop label="Country" value="{{movie.country}}"></app-movie-prop>
+      <app-movie-prop label="Country" value="{{getCountryImageUrl()}}" kind="{{PropertyKind['Image']}}"></app-movie-prop>
       <app-movie-prop label="Year" value="{{movie.year}}"></app-movie-prop>
       <app-movie-prop label="Duration" value="{{movie.duration + ' min'}}"></app-movie-prop>
     </section>
