@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/find';
 import 'rxjs/add/operator/map';
 
 import { Movie } from './model/movie';
@@ -15,5 +16,9 @@ export class DatastoreService {
 
   getAllMovies(): Observable<Movie[]> {
     return this.http.get<Movie[]>('/assets/datastore.json');
+  }
+
+  getMovie(id:string): Observable<Movie> {
+    return this.http.get<Movie[]>('/assets/datastore.json').map(movies => movies.find(movie => movie.id === id));
   }
 }
