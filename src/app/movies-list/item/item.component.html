@@ -1,5 +1,10 @@
-<div class="list-group-item">
-    <h2><a routerLink="/movie/{{movie.id}}">{{movie.title}}</a></h2>
-    <div>{{movie.director}}</div>
-    <div><img src={{getUrl()}} alt={{movie.country}} title={{movie.country}} /> {{movie.year}}</div>
+<div class="card">
+    <h2 class="card-header card-title">
+        <a routerLink="/movie/{{movie.id}}">{{movie.title}}</a>
+    </h2>
+    <div class="card-body">
+        <div>{{movie.director}}</div>
+        <div>
+            <img src={{getUrl()}} alt={{movie.country}} title={{movie.country}} /> {{movie.year}}</div>
+    </div>
 </div>
