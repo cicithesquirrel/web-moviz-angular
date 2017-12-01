@@ -4,16 +4,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MoviesListModule } from './movies-list/movies-list.module';
-import { MainComponent } from './movie-detail/main/main.component';
+import { MovieDetailModule } from './movie-detail/movie-detail.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MainComponent
+    AppComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, MoviesListModule, AppRoutingModule
+    BrowserModule, HttpClientModule, MoviesListModule, MovieDetailModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
