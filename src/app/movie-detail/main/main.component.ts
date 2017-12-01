@@ -34,7 +34,17 @@ export class MainComponent implements OnInit {
       .subscribe(m => this.movie = m);
   }
 
-  getCountryImageUrl() :string{
+  getCountryImageUrl(): string {
     return '/assets/flags/' + this.movie.country + '.png';
+  }
+
+  getAltTitles() {
+    let titles = [];
+    if (this.movie['alt-titles']) {
+      for (var country in this.movie['alt-titles']) {
+        titles.push({ country: country, title: this.movie['alt-titles'][country] });
+      }
+    }
+    return titles;
   }
 }

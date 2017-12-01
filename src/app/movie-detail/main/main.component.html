@@ -18,9 +18,13 @@
       <app-movie-prop label="Year" value="{{movie.year}}"></app-movie-prop>
       <app-movie-prop label="Duration" value="{{movie.duration + ' min'}}"></app-movie-prop>
     </section>
-    <section>
+    <section *ngIf="movie['alt-titles']">
       <h3>Other titles</h3>
-      TODO Other titles
+      <ul>
+        <li *ngFor="let t of getAltTitles()">
+          <app-alt-title [title]="t"></app-alt-title>
+        </li>
+      </ul>
     </section>
   </div>
 </div>
