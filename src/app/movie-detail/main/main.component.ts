@@ -22,10 +22,10 @@ export class MainComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.getMovie();
+    this.loadMovie();
   }
 
-  getMovie() {
+  loadMovie() {
     const id = this.route.snapshot.paramMap.get('id');
     this.datastore.getMovie(id)
       .subscribe(m => this.movie = m);
