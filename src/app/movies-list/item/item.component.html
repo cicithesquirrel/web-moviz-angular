@@ -1,5 +1,5 @@
 <div class="list-group-item">
-    <h2>{{movie.title}}</h2>
+    <h2><a routerLink="/movie/{{movie.id}}">{{movie.title}}</a></h2>
     <div>{{movie.director}}</div>
     <div><img src={{getUrl()}} alt={{movie.country}} title={{movie.country}} /> {{movie.year}}</div>
 </div>
