@@ -45,6 +45,6 @@ export class MainComponent implements OnInit {
         titles.push({ country: country, title: this.movie['alt-titles'][country] });
       }
     }
-    return titles;
+    return titles.sort((t1, t2) => t1.country.localeCompare(t2.country));
   }
 }
